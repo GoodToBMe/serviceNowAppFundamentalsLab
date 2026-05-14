@@ -1,3 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="cf1df560d5f003107f44297d9e35aadf" extends="task" label="Loaner Request" max_length="40" name="x_cdltd_loaner_r_0_loaner_request" type="collection"/>
+    <element db_object_id="cf1df560d5f003107f44297d9e35aadf" extends="task" label="Loaner Request" max_length="40" name="x_cdltd_loaner_r_0_loaner_request" type="collection">
+        <element choice="3" default="sc" label="Depot" max_length="40" name="depot" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Santa Clara" sequence="3" value="sc"/>
+                <element inactive_on_update="false" label="Singapore" sequence="4" value="singapore"/>
+                <element inactive_on_update="false" label="London" sequence="1" value="london"/>
+                <element inactive_on_update="false" label="New York" sequence="0" value="ny"/>
+                <element inactive_on_update="false" label="Sydney" sequence="5" value="sydney"/>
+                <element inactive_on_update="false" label="Buenos Aires" sequence="2" value="ba"/>
+                <element inactive_on_update="false" label="Other" sequence="6" value="Other"/>
+            </choice>
+        </element>
+        <element label="End date" mandatory="true" max_length="255" name="end_date" type="glide_date_time"/>
+    </element>
 </database>
